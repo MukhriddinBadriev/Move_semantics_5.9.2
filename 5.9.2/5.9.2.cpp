@@ -17,7 +17,7 @@ public:
     }
 
     big_integer& operator=(big_integer&& other) noexcept {        //перемещающий оператор присваивания
-        string_number = other.string_number;
+        string_number = std::move(other.string_number);
         return *this;
     }
 
